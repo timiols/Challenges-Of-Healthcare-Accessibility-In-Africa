@@ -36,6 +36,50 @@ The dataset was properly structured and didn’t require complex cleaning. Howev
   ![Screenshot 2025-03-25 133734](https://github.com/user-attachments/assets/55ade1f7-0713-4bae-8b8b-dd562db7bb92)
 
  ### Data analysis
+ Power query M language and Power BI dax functions were used to create and insert relevant records to enhance the useability of the dataset.
+ Here are the queries deployed in this analyis:
+ ```M language
+if [Facility Type] = "Hospital" then "Urban" 
+else if [Population] >= 6000 then "Urban" 
+else if [Facility Type] = "Clinic" or [Facility Type] = "Health Center" and [Population] < 6000 then "Rural" 
+else "Rural"
+```
+```DAX
+Funding_Emergency_Response_Correlation = 
+VAR XMean = AVERAGE(Healthcare_Access_Africa[Funding Received (USD)])
+VAR YMean = AVERAGE(Healthcare_Access_Africa[Emergency Response Time (minutes)])
+VAR Numerator = SUMX(Healthcare_Access_Africa, 
+    (Healthcare_Access_Africa[Funding Received (USD)] - XMean) * 
+    (Healthcare_Access_Africa[Emergency Response Time (minutes)] - YMean))
+VAR Denominator = SQRT(
+    SUMX(Healthcare_Access_Africa, (Healthcare_Access_Africa[Funding Received (USD)] - XMean)^2) *
+    SUMX(Healthcare_Access_Africa, (Healthcare_Access_Africa[Emergency Response Time (minutes)] - YMean)^2)
+)
+RETURN 
+    IF(Denominator = 0, BLANK(), Numerator / Denominator)
+```
+```
+Funding per Visit = 
+DIVIDE(
+    'Healthcare_Access_Africa'[Funding Received (USD)], 
+    'Healthcare_Access_Africa'[Annual Patient Visits], 
+    BLANK()
+)
+```
+
+### Results/Findings
+- Healthcare Facility Distribution: Urban areas have 1,220 facilities (61%), while rural areas have only 780 (39%). Rural regions have fewer healthcare facilities, limiting access for      underserved populations.
+- Funding Distribution: Interestingly, urban and rural facilities receive almost equal funding averagely ($107,026 for urban and $106,242 for rural areas). Despite the closeness in         funding, rural areas have fewer facilities and the Funding distribution does not align with population needs - rural regions need more support.
+- Funding vs. Emergency Response Time: There is no strong correlation (-0.032) between funding and emergency response time. More funding does not necessarily improve response times.        Other factors (infrastructure, staffing, logistics) may be more critical.
+- Efficiency of Facility Types (Funding per Patient Visit): Hospitals are the most efficient, with the lowest funding per visit ($16.35). Hospitals benefit from higher patient volumes      and economies of scale compared to clinics and health centres.
+
+### Recommendations
+- Bridge Urban-Rural gaps in healthcare accessibility by increasing the number of rural healthcare facilities to improve accessibility and also enhance transportation network and           electricity supply in rural areas.
+- Reallocate more funding to rural areas based on patient demand.
+- Improve ambulance networks to reduce emergency response time, Also, telemedicine can be used to reach more rural people, to achieve this, the electricity in rural areas needs to be       efficient.
+- Monitor facility performance and adjust funding based on impact metrics. 
+
+
  
 
 
