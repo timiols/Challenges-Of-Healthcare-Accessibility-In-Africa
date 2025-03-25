@@ -25,7 +25,7 @@ The following steps were taken to improve the dataset;
 - **Funding per patient visit** column was created and added to the dataset using average function in Dax to derive average funding per patient visit. This was achieved using data from *funding received (USD)]*  and *annual Patient visits* columns.
 - Measure was created using DAX  and added to the dataset to calculate the Pearson correlation coefficient between *funding received (USD)* and *emergency response time (minutes)* columns.
 
- *improved dataset* [Healthcare accessibilty in africa.xlsx](clean-dataset.xlsx)
+ *improved dataset* [Healthcare accessibilty in africa.xlsx](CLEAN-DATASET.csv)
 
 ### Exploratory Data Analysis
 
