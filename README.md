@@ -1,6 +1,18 @@
 # Challenges-Of-Healthcare-Accessibility-In-Africa
 This project analyzes healthcare facility data from selected afrcian communities, to identify disparities in access to healthcare between rural and urban regions, 
 and evaluate the efficiency of healthcare funding. The analysis uses power BI (power query, Dax, visualizations) to genrate insights.
+
+## Table of content
+- [Project Overview](#project-overview)
+- [Dataset](#dataset)
+- [Tools](#tools)
+- [Data Cleaning](#data-cleaning)
+- [Exploratory Data Analysis](#exploratory-data-analysis)
+- [Data Analysis](#data-analysis)
+- [Results and Findings](#results-and-findings)
+- [Recommendations](#recommendations)
+
+
 ### Project Overview
 
 This project aims to analyze the challenges of healthcare accessibilty in Africa, using data gathered from selected communities to:
@@ -76,7 +88,7 @@ DIVIDE(
 )
 ```
 
-### Results/Findings
+### Results and Findings
 
 - Healthcare Facility Distribution: Urban areas have 1,220 facilities (61%), while rural areas have only 780 (39%). Rural regions have fewer healthcare facilities, limiting access for      underserved populations.
 - Funding Distribution: Interestingly, urban and rural facilities receive almost equal funding averagely ($107,026 for urban and $106,242 for rural areas). Despite the closeness in         funding, rural areas have fewer facilities and the Funding distribution does not align with population needs - rural regions need more support.
