@@ -2,6 +2,7 @@
 This project analyzes healthcare facility data from selected afrcian communities, to identify disparities in access to healthcare between rural and urban regions, 
 and evaluate the efficiency of healthcare funding. The analysis uses power BI (power query, Dax, visualizations) to genrate insights.
 ### Project Overview
+
 This project aims to analyze the challenges of healthcare accessibilty in Africa, using data gathered from selected communities to:
 - Identify key disparities in healthcare access between rural and urban regions.
 - Analyze the efficiency of healthcare funding and resource allocation across different facilities.
@@ -9,18 +10,25 @@ This project aims to analyze the challenges of healthcare accessibilty in Africa
 - Develop strategic recommendations for policymakers to ensure equitable healthcare access.
 - To communicate findings effectively using visualization techniques.
 ![rec](https://github.com/user-attachments/assets/96df4922-8f9f-4859-94b0-65b8f7a0c7ff)
+
 ### Dataset
 
 The dataset used for this analysis is the [challenges of healthcare accessiblity in Africa ](https://github.com/timiols/Challenges-Of-Healthcare-Accessibility-In-Africa/blob/main/Healthcare_Access_Africa.csv) dataset consisting of 15 columns and 2001 rows.
 ### Tools
 - **Power query**
 - **Power Bi**
+  
 ### Data Cleaning
-The dataset was properly structured and didn’t require complex cleaning. However, the following steps were taken to improve the dataset.
+
+The following steps were taken to improve the dataset;
 - **Urban_rural_area** column was created to categorize the regions into their respective area type. To achieve this, the custom column function in power query was used, using data from *population* and *facility type* columns.
 - **Funding per patient visit** column was created and added to the dataset using average function in Dax to derive average funding per patient visit. This was achieved using data from *funding received (USD)]*  and *annual Patient visits* columns.
 - Measure was created using DAX  and added to the dataset to calculate the Pearson correlation coefficient between *funding received (USD)* and *emergency response time (minutes)* columns.
+
+ *improved dataset* [Healthcare accessibilty in africa.xlsx](clean-dataset.xlsx)
+
 ### Exploratory Data Analysis
+
 - How does the distribution of healthcare facilities compare between rural and urban regions?
 
   ![Screenshot 2025-03-25 133652](https://github.com/user-attachments/assets/9a3007dd-8eae-427c-b8e7-336df6cb943c)
@@ -36,6 +44,7 @@ The dataset was properly structured and didn’t require complex cleaning. Howev
   ![Screenshot 2025-03-25 133734](https://github.com/user-attachments/assets/55ade1f7-0713-4bae-8b8b-dd562db7bb92)
 
  ### Data analysis
+ 
  Power query M language and Power BI dax functions were used to create and insert relevant records to enhance the useability of the dataset.
  Here are the queries deployed in this analyis:
  ```M language
@@ -68,12 +77,14 @@ DIVIDE(
 ```
 
 ### Results/Findings
+
 - Healthcare Facility Distribution: Urban areas have 1,220 facilities (61%), while rural areas have only 780 (39%). Rural regions have fewer healthcare facilities, limiting access for      underserved populations.
 - Funding Distribution: Interestingly, urban and rural facilities receive almost equal funding averagely ($107,026 for urban and $106,242 for rural areas). Despite the closeness in         funding, rural areas have fewer facilities and the Funding distribution does not align with population needs - rural regions need more support.
 - Funding vs. Emergency Response Time: There is no strong correlation (-0.032) between funding and emergency response time. More funding does not necessarily improve response times.        Other factors (infrastructure, staffing, logistics) may be more critical.
 - Efficiency of Facility Types (Funding per Patient Visit): Hospitals are the most efficient, with the lowest funding per visit ($16.35). Hospitals benefit from higher patient volumes      and economies of scale compared to clinics and health centres.
-
+  
 ### Recommendations
+
 - Bridge Urban-Rural gaps in healthcare accessibility by increasing the number of rural healthcare facilities to improve accessibility and also enhance transportation network and           electricity supply in rural areas.
 - Reallocate more funding to rural areas based on patient demand.
 - Improve ambulance networks to reduce emergency response time, Also, telemedicine can be used to reach more rural people, to achieve this, the electricity in rural areas needs to be       efficient.
