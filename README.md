@@ -1,4 +1,4 @@
-[Healthcare_Access_Africa.csv](https://github.com/user-attachments/files/19447028/Healthcare_Access_Africa.csv)# Challenges-Of-Healthcare-Accessibility-In-Africa
+# Challenges-Of-Healthcare-Accessibility-In-Africa
 This project analyzes healthcare facility data from selected afrcian communities, to identify disparities in access to healthcare between rural and urban regions, 
 and evaluate the efficiency of healthcare funding. The analysis uses power BI (power query, Dax, visualizations) to genrate insights.
 ### Project Overview
