@@ -23,7 +23,7 @@ This project aims to analyze the challenges of healthcare accessibilty in Africa
 - To communicate findings effectively using visualization techniques.
 ![rec](https://github.com/user-attachments/assets/96df4922-8f9f-4859-94b0-65b8f7a0c7ff)
 
-[Click to downaod and interact with the dashboard](https://github.com/timiols/Challenges-Of-Healthcare-Accessibility-In-Africa/blob/5ce4d3b0be98d6925f70ff43da2936879b9c71cd/CHALLENGES%20OF%20HEALTHCARE%20ACCESSIBILTY%20IN%20NIGERIA.pbix)
+  [Click to downaod and interact with the dashboard](https://github.com/timiols/Challenges-Of-Healthcare-Accessibility-In-Africa/blob/5ce4d3b0be98d6925f70ff43da2936879b9c71cd/CHALLENGES%20OF%20HEALTHCARE%20ACCESSIBILTY%20IN%20NIGERIA.pbix)
 
 ### Dataset
 
