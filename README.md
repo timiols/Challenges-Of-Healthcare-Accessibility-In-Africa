@@ -23,6 +23,8 @@ This project aims to analyze the challenges of healthcare accessibilty in Africa
 - To communicate findings effectively using visualization techniques.
 ![rec](https://github.com/user-attachments/assets/96df4922-8f9f-4859-94b0-65b8f7a0c7ff)
 
+[Click to downaod and interact with the dashboard](CHALLENGES OF HEALTHCARE ACCESSIBILTY IN NIGERIA.pbix)
+
 ### Dataset
 
 The dataset used for this analysis is the [challenges of healthcare accessiblity in Africa ](https://github.com/timiols/Challenges-Of-Healthcare-Accessibility-In-Africa/blob/main/Healthcare_Access_Africa.csv) dataset consisting of 15 columns and 2001 rows.
