@@ -61,13 +61,13 @@ The following steps were taken to improve the dataset;
  
  Power query M language and Power BI dax functions were used to create and insert relevant records to enhance the useability of the dataset.
  Here are the queries deployed in this analyis:
- ```M language
+ ```SQL
 if [Facility Type] = "Hospital" then "Urban" 
 else if [Population] >= 6000 then "Urban" 
 else if [Facility Type] = "Clinic" or [Facility Type] = "Health Center" and [Population] < 6000 then "Rural" 
 else "Rural"
 ```
-```DAX
+```SQL
 Funding_Emergency_Response_Correlation = 
 VAR XMean = AVERAGE(Healthcare_Access_Africa[Funding Received (USD)])
 VAR YMean = AVERAGE(Healthcare_Access_Africa[Emergency Response Time (minutes)])
@@ -81,7 +81,7 @@ VAR Denominator = SQRT(
 RETURN 
     IF(Denominator = 0, BLANK(), Numerator / Denominator)
 ```
-```
+```SQL
 Funding per Visit = 
 DIVIDE(
     'Healthcare_Access_Africa'[Funding Received (USD)], 
